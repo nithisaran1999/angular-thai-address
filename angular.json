@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "thai-address": {
+      "projectType": "library",
+      "root": "projects/thai-address",
+      "sourceRoot": "projects/thai-address/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/thai-address/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/thai-address/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/thai-address/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/thai-address/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "d7c6c9d0-3565-4364-8ec0-0b96d6ee0a8e"
   }
 }
