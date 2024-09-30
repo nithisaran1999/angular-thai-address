@@ -1,0 +1,26 @@
+<div class="th-address-container" [ngStyle]="containerStyle">
+    <input
+      class="th-address-input"
+      [ngClass]="inputClassList"
+      [type]="inputType"
+      autocomplete="off"
+      [value]="value"
+      (input)="search($event.target.value)"
+      (blur)="closeAutocomplete()"
+      (keydown.esc)="clearAutocomplete()"
+      (keydown.up)="moveUp()"
+      (keydown.down)="moveDown()"
+      (keydown.enter)="pickCurrentItem()"
+      [attr]="filteredAttrs"
+    />
+    <app-autocomplete
+      [query]="value"
+      [items]="possibles"
+      [target]="target"
+      [maxHeight]="autocompleteMaxHeight"
+      [itemCount]="autocompleteItemCount"
+      [(selectedIndex)]="selectedIndex"
+      (itemclick)="commitItem($event)"
+    ></app-autocomplete>
+  </div>
+  

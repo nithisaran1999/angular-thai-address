@@ -1,0 +1,24 @@
+input.th-address-input {
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    color: $text-color;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    padding: 8px 6px;
+    transition-property: border;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+  
+    &:focus {
+      outline: 0;
+      border-color: $border-focus-color;
+    }
+  
+    &[type='number'] {
+      appearance: textfield;
+    }
+  }
+  

@@ -1,0 +1,22 @@
+.th-address-autocomplete {
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+
+  li {
+    background-color: $bg-color;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    &:hover, &.active {
+      background-color: $bg-hover-color !important;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

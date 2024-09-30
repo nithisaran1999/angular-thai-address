@@ -1,0 +1,7 @@
+<div class="th-address">
+    <label *ngIf="hasLabel" class="th-address-label">
+      <div class="label-text">{{ label }}</div>
+      <app-typeahead-input (addressinput)="onInput($event)"></app-typeahead-input>
+    </label>
+    <app-typeahead-input *ngIf="!hasLabel" (addressinput)="onInput($event)"></app-typeahead-input>
+  </div>

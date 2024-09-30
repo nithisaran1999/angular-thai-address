@@ -1,0 +1,11 @@
+<ul class="th-address-autocomplete" *ngIf="hasData" [ngStyle]="autocompleteStyle">
+  <li
+    #autocompleteItem
+    *ngFor="let item of itemList; let index = index"
+    [class.active]="selectedIndex === index"
+    [ngStyle]="autocompleteListStyle"
+    [innerHTML]="item.text"
+    (click)="onItemClick(item.data)"
+    (mouseenter)="changeSelectedIndex(index)"
+  ></li>
+</ul>
